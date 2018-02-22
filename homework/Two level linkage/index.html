@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="example">
+        <select v-model="prov">
+            <option v-for="option in arr" :value="option.name">
+                {{ option.name }}
+            </option>
+        </select>
+        <select v-model="city">
+            <option v-for="option in cityArr" :value="option.name">
+                {{ option.name }}
+            </option>
+        </select>
+        <select v-model="district" v-if="district">
+            <option v-for="option in districtArr" :value="option.name">
+                {{ option.name }}
+            </option>
+        </select>
+    </div>
+    <script src="./scritp/vue.min.js"></script>
+    <script src="./scritp/script.js"></script>
+</body>
+
+</html>
